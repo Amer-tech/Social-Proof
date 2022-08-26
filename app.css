@@ -1,0 +1,343 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* CSS RESET KOD */
+
+
+:root {
+    --dark-purple: hsl(300, 43%, 22%);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(images/bg-pattern-top-desktop.svg), url(images/bg-pattern-bottom-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: left top, right bottom;
+    font-family: 'League Spartan', sans-serif;
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    width: 100%;
+    max-width: 1100px;
+    display: flex;
+    flex-direction: column;
+}
+
+#top-content {
+    display: flex;
+    flex: 1;
+    margin-bottom: 60px;
+}
+
+#left-content {
+    flex: 1;
+}
+
+#left-content h1 {
+    color: var(--dark-purple);
+    font-weight: 700;
+    font-size: 3.2rem;
+    width: 65%;
+    margin-bottom: 30px;
+}
+
+#left-content p {
+    color: hsl(303, 10%, 53%);
+    font-weight: 400;
+    font-size: 1.2rem;
+    width: 80%;
+}
+
+/* RATING DIV SECTION */
+#right-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.rating-div {
+    background-color: hsl(300, 24%, 96%);
+    border-radius: 10px;
+    margin-bottom: 15px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.stars {
+    flex: 1.7;
+    display: flex;
+    justify-content: center;
+}
+
+.star {
+    margin-right: 5px;
+}
+
+.rating-div p {
+    color: var(--dark-purple);
+    font-weight: 700;
+    font-size: 1.15rem;
+    flex: 2;
+}
+
+.rating-div:nth-of-type(3) {
+    transform: translate(15%)
+}
+
+.rating-div:nth-of-type(2) {
+    transform: translate(7%);
+}
+
+/* RATING DIV SECTION END*/
+
+#bottom-content {
+    flex: 1;
+    display: flex;
+    gap: 20px;
+}
+
+.review-card {
+    background-color: var(--dark-purple);
+    border-radius: 10px;
+}
+
+.review-card:nth-of-type(3) {
+    transform: translateY(15%);
+}
+
+.review-card:nth-of-type(2) {
+    transform: translateY(7%);
+}
+
+.review-card-content {
+    margin: 40px;
+}
+
+.review-card-author img {
+    display: inline-block;
+    float: left;
+    max-width: 100%;
+    width: 40px;
+    border-radius: 50%;
+}
+
+span {
+    display: inline-block;
+    transform: translate(20px, 5px);
+}
+
+.review-card-author-name {
+    color: white;
+    font-weight: 700;
+}
+
+.tag {
+    color: hsl(333, 45%, 53%);
+}
+
+.review-card-p {
+    margin-top: 30px;
+    clear: left;
+}
+
+.review-card-p p {
+    color: white;
+    line-height: 20px;
+    font-weight: 400;
+    clear: left;
+}
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+}
+
+@media (max-width: 870px) {
+    body {
+        background-image: url(images/bg-pattern-top-mobile.svg), url(images/bg-pattern-bottom-mobile.svg)
+    }
+
+    .rating-div:nth-of-type(3) {
+        transform: none;
+    }
+
+    .rating-div:nth-of-type(2) {
+        transform: none;
+    }
+
+    #top-content {
+        flex-direction: column;
+    }
+
+    .rating-div {
+        flex-direction: column;
+        height: 80px;
+        justify-content: center;
+    }
+
+    .rating-div p {
+        flex: 0;
+    }
+
+    .stars {
+        align-items: center;
+        flex: 0;
+        margin-bottom: 15px;
+    }
+
+    #bottom-content {
+        flex-direction: column;
+    }
+
+    main {
+        margin: 60px 40px;
+    }
+
+    #left-content {
+        margin-bottom: 40px;
+    }
+
+    #left-content h1,
+    #left-content p {
+        width: 100%;
+        text-align: center;
+    }
+
+}
